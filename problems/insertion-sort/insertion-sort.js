@@ -1,10 +1,14 @@
 // https://sortvisualizer.com/insertionsort/
 // https://en.wikipedia.org/wiki/Insertion_sort
 
+// function swap(arr, i, k) {
+//   let temp = arr[i];
+//   arr[i] = arr[k];
+//   arr[k] = temp;
+// }
+
 function swap(arr, i, k) {
-  let temp = arr[i];
-  arr[i] = arr[k];
-  arr[k] = temp;
+  [arr[i], arr[k]] = [arr[k], arr[i]];
 }
 
 export function insertionSort(arr) {
