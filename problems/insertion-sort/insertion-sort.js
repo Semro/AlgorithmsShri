@@ -15,7 +15,7 @@ export function insertionSort(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
     let k = i;
 
-    while (arr[k] > arr[k + 1]) {
+    while (k >= 0 && arr[k] > arr[k + 1]) {
       swap(arr, k, k + 1);
       k--;
     }
