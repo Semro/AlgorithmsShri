@@ -9,5 +9,15 @@
  */
 
 export function reverseList(head) {
+  let cur = head;
+  let prev = null;
+  while (cur) {
+    const nextTemp = cur.next;
+    cur.next = prev;
+    prev = cur;
+    cur = nextTemp;
+  }
 
+  console.log(prev);
+  return prev;
 }
